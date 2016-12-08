@@ -66,6 +66,14 @@ if( !has_post_thumbnail() ){
 	?>
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<div class="artist-info">
+				<!--.Displays customfield of the artist-->
+				<?php echo types_render_field("artist-image", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+				<br>
+				<?php echo types_render_field("artist-bio", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+				<br>
+				<?php echo types_render_field("artist-playlist", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+		</div>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'acmephoto' ),

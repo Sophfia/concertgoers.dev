@@ -7,11 +7,13 @@
  * @package Acme Themes
  * @subpackage AcmePhoto
  */
-global $acmephoto_customizer_all_values;
+global $acmephoto_customizer_all_values;?>
 
-get_header(); ?>
+<div class="venueNav"><!--.displays the nav bar-->
+	<?php get_header(); ?>
+</div>
 
-<header class="artist-main-header">
+<header class="artist-main-header"><!--.displays the title/name of the artist post-->
 	<div class="artist-container">
 		<?php the_title( '<h1 class="artist-main-title">', '</h1>' ); ?>
 	</div>
@@ -21,8 +23,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php
 			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'single' );
+			//this method gets all the content of the artist post(this is what displays all the information for the post artist)
+				get_template_part( 'template-parts/content-artist', 'single' );
 
 				the_post_navigation( array(
 					'prev_text'                  => __( '<span class="nav-title prev">'.__('Previous','acmephoto').'</span>' ),
@@ -36,12 +38,6 @@ get_header(); ?>
 				 * @hooked acmephoto_related_posts_below -  10
 				 */
 				do_action( 'acmephoto_related_posts' ,get_the_ID() );
-
-				echo types_render_field("artist-image", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));
-				
-				echo types_render_field("artist-bio", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));
-
-				echo types_render_field("artist-playlist", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
