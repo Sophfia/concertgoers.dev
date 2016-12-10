@@ -39,7 +39,7 @@ div#navbar{
 .banner-search .search-block {
 	height: 36px;
     background-color: white;
-    margin: 35px auto;
+    margin: 40px auto;
 }
 .banner-search .search-block input#menu-search {
     height: 33px;
@@ -113,6 +113,11 @@ div#venue-content-area {
     -webkit-column-width: 100px; /* Chrome, Safari, Opera */
     -moz-column-width: 100px; /* Firefox */
    	column-width: 100px;
+    background-color: #faebd7;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    margin-top: 20px;
 }
 .venueNav .site-content {
     margin-top: 0;
@@ -122,27 +127,38 @@ div#venue-content-area {
     margin: 10px;
 }*/
 
+.venue_contact_info {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgba(255, 12, 0, 0.65);
+    border-radius: 5px;
+    height: 100px;
+}
 
+.venue_content_col{
+    webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-width: 100px; /* Chrome, Safari, Opera */
+    -moz-column-width: 100px; /* Firefox */
+    column-width: 100px;
+}
+.venue_images{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 400px;
+    overflow:scroll;
+
+}
+.venue_contact_info ul {
+    margin: 0;
+    padding: 20 40;
+    color: white;
+    list-style: none;
+}
 .venue-main-header{
 	position: absolute;
     margin-top: -60px;
     width: 50%;
     margin-left: 50px;
-	/*display: table;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: 15;
-    max-width: 1200px;
-    width: 100%;
-    padding: 24px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;*/
 }
 	
 }
@@ -154,18 +170,58 @@ h1.venue-main-title {
 }
 
 /*--------------------------------------------------------------
-# Google Venue Banner
+# Artist Post
 --------------------------------------------------------------*/
-.gm-inset-map.gm-inset-map-small.gm-inset-light {
-    display: none;
+header.artist-main-header {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgba(255, 12, 0, 0.65);
+    border-radius: 5px;
+    height: 60px;
 }
-/*table w/ address / View larger map / fav*/
-.place-card.place-card-medium {
-    display: none;
-}
-.gm-style .place-card-medium {
-	display: none;
-}
-	
 
+.artist-container {
+    padding: 5px 5px;
+}
 
+h1.artist-main-title {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.artist-sidebar, .artist-info{
+    webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 100px;
+    -moz-column-width: 100px;
+    column-width: 100px;
+}
+.album-image{
+    text-align: center;
+}
+.album-image img {
+    border-radius: 50%;
+    width: 150;
+}
+
+/*.album_contact_info {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgba(255, 12, 0, 0.65);
+    border-radius: 5px;
+    height: 100px;
+}*/
+.artist-bio {
+    text-align: justify;
+    webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-width: 100px; /* Chrome, Safari, Opera */
+    -moz-column-width: 100px; /* Firefox */
+    column-width: 100px;
+    background-color: #faebd7;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    margin-top: 20px;
+}

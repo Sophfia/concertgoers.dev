@@ -66,17 +66,25 @@ if( !has_post_thumbnail() ){
 		<?php the_content(); ?>
 		<!-- the follwoing echo types_render_field(s) print the customfields that were created for the venue post-->
 		<div id="venue-content-area">
-			<div class="venue_contact_info">
-				<!--Displays the street, city, state zipcode of the venue breakline phone number-->
-				<?php echo types_render_field("venue-street", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
-				<?php echo types_render_field("venue-csz", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
-				<br>
-				<?php echo types_render_field("venue-pnum", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+			<div class="venue_content_col">
+				<div class="venue_images">
+					<!--.Displays images of the venue-->
+					<?php echo types_render_field("venue-image", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?> 
+				</div>
+				<div class="venue_contact_info">
+					<!--Displays the street, city, state zipcode of the venue breakline phone number-->
+					<ul>
+						<li>
+							<?php echo types_render_field("venue-street", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+							<?php echo types_render_field("venue-csz", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+						</li>
+						<li>
+							<?php echo types_render_field("venue-pnum", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="venue_images">
-				<!--.Displays images of the venue-->
-				<?php echo types_render_field("venue-image", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?> 
-			</div>
+
 			<div class="venue_description">
 				<!--.Display description of the venue-->
 				<?php echo types_render_field("venue-description", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>

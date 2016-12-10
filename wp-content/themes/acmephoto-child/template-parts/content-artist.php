@@ -46,9 +46,7 @@ if( !has_post_thumbnail() ){
 	<?php
 	}
 	?>
-	<header class="entry-header border">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	
 	<?php
 	if( !has_post_thumbnail() ){
 		?>
@@ -68,12 +66,21 @@ if( !has_post_thumbnail() ){
 		<?php the_content(); ?>
 		<div class="artist-info">
 				<!--.Displays customfield of the artist-->
-				<?php echo types_render_field("artist-image", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
-				<br>
-				<?php echo types_render_field("artist-bio", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
-				<br>
-				<?php echo types_render_field("artist-playlist", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+				<div class="artist-image">
+						<?php echo types_render_field("artist-image", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+					</div>
+				<div class="artist-sidebar">
+					<div class="album-image">
+						<?php echo types_render_field("album-image", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+					</div>
+					<div class="artist-playlist">
+						<?php echo types_render_field("artist-playlist", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+					</div>
+				</div>
 		</div>
+		<div class="artist-bio">
+					<?php echo types_render_field("artist-bio", array("argument1"=>"value1","argument2"=>"value2","argument2"=>"value2"));?>
+				</div>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'acmephoto' ),
