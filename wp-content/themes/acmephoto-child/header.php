@@ -19,7 +19,7 @@
  */
 do_action( 'acmephoto_action_before_head' );?>
 	<head>
-
+		<link href="https://fonts.googleapis.com/css?family=Monoton|Playfair+Display" rel="stylesheet">
 		<?php
 		/**
 		 * acmephoto_action_before_wp_head hook

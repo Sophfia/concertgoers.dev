@@ -8,6 +8,7 @@
  * @return void
  *
  */
+
 if ( !function_exists('acmephoto_default_slider') ) :
     function acmephoto_default_slider(){
 
@@ -20,11 +21,9 @@ if ( !function_exists('acmephoto_default_slider') ) :
             <div class="slider-desc">
                 <div class="slider-details">
                     <div class="slide-title">
-                        <?php _e('Concert Goers','acmephoto'); ?>
+                       
                     </div>
-                    <?php
-                    echo '<div class="slide-caption">'.__("Don't miss anything",'acmephoto').'</div>';
-                    ?>
+                    
                 </div>
             </div>
         </div>

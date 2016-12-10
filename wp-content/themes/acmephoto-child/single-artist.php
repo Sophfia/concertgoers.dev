@@ -10,6 +10,9 @@
 global $acmephoto_customizer_all_values;?>
 
 <div class="venueNav"><!--.displays the nav bar-->
+	<div class="banner-search"> <!--displays the search bar-->
+         <?php get_search_form()?>
+    </div>
 	<?php get_header(); ?>
 </div>
 
@@ -24,7 +27,7 @@ global $acmephoto_customizer_all_values;?>
 			<?php
 			while ( have_posts() ) : the_post();
 			//this method gets all the content of the artist post(this is what displays all the information for the post artist)
-				get_template_part( 'template-parts/content-artist', 'single' );
+				get_template_part( 'template-parts/content-artist', 'single-artist' );
 
 				the_post_navigation( array(
 					'prev_text'                  => __( '<span class="nav-title prev">'.__('Previous','acmephoto').'</span>' ),

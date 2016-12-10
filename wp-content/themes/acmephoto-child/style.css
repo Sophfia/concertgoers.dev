@@ -13,27 +13,50 @@ Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-
 
 */
 
-div#navbar {
-	background: transparent;
-    position: absolute;
+div#navbar{
+	font-family: 'Monoton', cursive;
+    position: static;
+    background: rgba(255, 177, 0, 0.71);
+    background: -webkit-linear-gradient(left top, rgba(255, 166, 0, 0.93), rgba(255, 0, 0, 0.98));
+    background: -o-linear-gradient(bottom right, red, yellow);
+    background: -moz-linear-gradient(bottom right, red, yellow);
+    background: linear-gradient(to bottom right, rgba(255, 12, 0, 0.65), rgba(255, 188, 0, 0.45));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+    height: 60px;
+    /*position: absolute;
     width: 100%;
-    box-shadow: none;
+    box-shadow: none;*/
 }
-
 /*Search Bar */
-
 .banner-search {
     top: 1%;
+    height: 90px;
+    width: 50%;
+    margin: 0 25%;
 }
 .banner-search .search-block {
-    border: none;
+	height: 36px;
+    background-color: white;
+    margin: 35px auto;
 }
-input#menu-search {
-	background-color: transparent;
-    border: 1px solid #F88C12;
+.banner-search .search-block input#menu-search {
+    height: 33px;
 }
-.banner-search .search-block {
-    border: none;
+.banner-search .search-block #searchsubmit {
+    font-size: 16px;
+    height: 26px;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    color: #000;
+}
+.footer-wrapper .border {
+    padding: 5px;
+}
+.footer-copyright{
+	background-color:transparent;
 }
 
 /*.slider-section .slider-desc{
@@ -43,32 +66,68 @@ input#menu-search {
 /*Header titile and caption */
 .slider-section .slide-title{
         text-transform: initial;
-        font-family: 'Combo', cursive;
+        font-family: 'Monoton', cursive;
+
+        /*font-family: 'Combo', cursive;*/
         text-shadow: 3px 4px #000;
         font-size: 80px;
 }
+h1.site-title{
+	    line-height: 1;
+}
+.site-title a{
+	font-family: 'Monoton', cursive;
+	font-size: 27px;
+}
 .slider-section .slide-caption{
-        font-family: 'Combo', cursive;
+        /*font-family: 'Combo', cursive;*/
+        font-family: 'Monoton', cursive;
         text-shadow: 1px 1px #000;
 }
 /*--------------------------------------------------------------
 # Venue Post
 --------------------------------------------------------------*/
-.venueNav #navbar{
-    position: static;
-    background-color:#F88C00;
-    height:54px;
+/*.venueNav #navbar {
+	height: 60px;
+
+}*/
+/*removed clear fix after navbar for venue*/
+div.venuenav #content.site-content.clearfix {
+    display: none;
 }
-.venueNav .site-content {
-    margin-top: 0;
+div#venue-content-area {
+    margin: 0 50px;
+    padding: 0 25px;
 }
 .venueMap {
     margin-left: -1.43%;
     margin-right: -1.43%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 1px 20px 20px 20px rgba(0, 0, 0, 0.19);
 }
+/*column for venue description*/
+.venue_description {
+    text-align: justify;
+    webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-width: 100px; /* Chrome, Safari, Opera */
+    -moz-column-width: 100px; /* Firefox */
+   	column-width: 100px;
+}
+.venueNav .site-content {
+    margin-top: 0;
+}
+/*used to center the title withing the navbar*/
+/*.venueNav .sticky-site-identity {
+    margin: 10px;
+}*/
+
+
 .venue-main-header{
 	position: absolute;
-    margin-top: 11%;
+    margin-top: -60px;
+    width: 50%;
+    margin-left: 50px;
 	/*display: table;
     position: absolute;
     left: 50%;
